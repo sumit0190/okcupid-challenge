@@ -1,0 +1,5 @@
+#OKCupid Matching Challenge
+
+The 'OKCupid Matching Challenge' involves reading a large collection of data in JSON format (read here through STDIN), and using the 'OKCupid Matching Algorithm' to find the top 10 'matches' for each profile (sorted in descending order). A complete description of this magic 'matching algorithm' can be found in the PDF file included here. A sample input JSON file is included as well.
+
+Two solutions are included here. The first, in Ruby, uses a simple loop-based structure to go through all profiles and find their best matches (requires the JSON gem; install using `gem install json`). The second, in Python, is optimized for efficiency - it uses a 'min-heap' data structure and reduces the space-complexity of the algorithm (requires the `PQDict` Python module; install using `pip install pqdict`). For a small number of input profiles (such as the 100 in the sample input file), the 'inefficient' algorithm is still faster than the optimized version (on my machine, the difference is about 200ms); the optimized version does have a much smaller memory footprint, though. And it just might be a little bit faster for a large number of inputs.
